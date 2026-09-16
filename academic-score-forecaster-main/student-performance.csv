@@ -1,0 +1,101 @@
+student_id,gender,age,study_hours_per_day,attendance_percentage,sleep_hours,previous_score,extracurricular,internet_access,parent_education_level,exam_score
+1,Male,18,5,85,7,72,Yes,Yes,Graduate,78
+2,Female,19,7,92,8,80,No,Yes,Postgraduate,88
+3,Male,20,3,70,6,60,Yes,No,High School,62
+4,Female,18,6,88,7,75,Yes,Yes,Graduate,81
+5,Male,21,2,65,5,55,No,No,High School,54
+6,Female,19,8,95,8,85,No,Yes,Postgraduate,92
+7,Male,20,4,78,7,68,Yes,Yes,Graduate,72
+8,Female,22,5,80,6,70,No,Yes,High School,74
+9,Male,18,6,87,8,76,Yes,Yes,Graduate,82
+10,Female,20,3,60,5,50,No,No,High School,51
+11,Male,19,7,91,7,82,No,Yes,Postgraduate,89
+12,Female,21,4,75,6,65,Yes,No,Graduate,68
+13,Male,18,5,83,7,73,Yes,Yes,Graduate,77
+14,Female,19,9,96,8,88,No,Yes,Postgraduate,95
+15,Male,20,2,58,5,48,No,No,High School,49
+16,Female,22,6,84,7,74,Yes,Yes,Graduate,79
+17,Male,21,4,72,6,63,Yes,No,High School,65
+18,Female,18,8,93,8,83,No,Yes,Postgraduate,91
+19,Male,19,5,81,7,71,Yes,Yes,Graduate,76
+20,Female,20,3,67,5,57,No,No,High School,58
+21,Male,22,7,89,8,79,No,Yes,Graduate,85
+22,Female,19,4,76,6,66,Yes,Yes,High School,69
+23,Male,18,6,86,7,77,Yes,Yes,Graduate,80
+24,Female,21,2,61,5,52,No,No,High School,53
+25,Male,20,8,94,8,84,No,Yes,Postgraduate,92
+26,Female,19,5,82,7,72,Yes,Yes,Graduate,77
+27,Male,22,3,69,6,59,No,No,High School,61
+28,Female,18,7,90,8,81,No,Yes,Postgraduate,88
+29,Male,20,4,74,6,64,Yes,No,Graduate,67
+30,Female,21,6,85,7,75,Yes,Yes,Graduate,80
+31,Male,19,5,80,7,70,No,Yes,High School,73
+32,Female,22,8,95,8,86,No,Yes,Postgraduate,93
+33,Male,18,3,64,5,54,Yes,No,High School,55
+34,Female,20,6,87,7,76,Yes,Yes,Graduate,82
+35,Male,21,4,73,6,62,No,No,High School,64
+36,Female,19,7,91,8,83,No,Yes,Postgraduate,90
+37,Male,22,5,83,7,72,Yes,Yes,Graduate,76
+38,Female,18,2,59,5,49,No,No,High School,50
+39,Male,20,9,97,8,89,No,Yes,Postgraduate,96
+40,Female,21,4,77,6,67,Yes,Yes,Graduate,70
+41,Male,19,6,86,7,76,Yes,Yes,Graduate,81
+42,Female,22,3,66,5,56,No,No,High School,57
+43,Male,18,7,92,8,82,No,Yes,Postgraduate,89
+44,Female,20,5,81,7,71,Yes,Yes,Graduate,75
+45,Male,21,4,75,6,65,Yes,No,High School,67
+46,Female,19,8,94,8,85,No,Yes,Postgraduate,93
+47,Male,22,3,68,5,58,No,No,High School,60
+48,Female,18,6,88,7,77,Yes,Yes,Graduate,83
+49,Male,20,5,82,7,73,No,Yes,Graduate,78
+50,Female,21,7,90,8,80,No,Yes,Postgraduate,87
+51,Male,19,4,74,6,64,Yes,No,High School,66
+52,Female,22,6,85,7,74,Yes,Yes,Graduate,79
+53,Male,18,2,60,5,51,No,No,High School,52
+54,Female,20,8,93,8,84,No,Yes,Postgraduate,91
+55,Male,21,5,80,7,70,Yes,Yes,Graduate,74
+56,Female,19,3,67,5,57,No,No,High School,58
+57,Male,22,7,89,8,79,No,Yes,Graduate,85
+58,Female,18,4,76,6,66,Yes,Yes,High School,69
+59,Male,20,6,87,7,77,Yes,Yes,Graduate,82
+60,Female,21,9,96,8,87,No,Yes,Postgraduate,94
+61,Male,19,3,65,5,55,No,No,High School,56
+62,Female,22,5,83,7,73,Yes,Yes,Graduate,77
+63,Male,18,7,91,8,81,No,Yes,Postgraduate,88
+64,Female,20,4,75,6,65,Yes,No,Graduate,68
+65,Male,21,6,86,7,75,Yes,Yes,Graduate,80
+66,Female,19,2,62,5,53,No,No,High School,54
+67,Male,22,8,93,8,83,No,Yes,Postgraduate,90
+68,Female,18,5,81,7,71,Yes,Yes,Graduate,75
+69,Male,20,4,73,6,63,Yes,No,High School,65
+70,Female,21,7,90,8,81,No,Yes,Postgraduate,88
+71,Male,19,3,66,5,56,No,No,High School,57
+72,Female,22,6,84,7,74,Yes,Yes,Graduate,78
+73,Male,18,5,82,7,72,Yes,Yes,Graduate,76
+74,Female,20,8,94,8,85,No,Yes,Postgraduate,92
+75,Male,21,4,76,6,66,Yes,No,High School,68
+76,Female,19,6,87,7,77,Yes,Yes,Graduate,82
+77,Male,22,2,61,5,52,No,No,High School,53
+78,Female,18,9,97,8,88,No,Yes,Postgraduate,95
+79,Male,20,5,80,7,70,No,Yes,Graduate,74
+80,Female,21,3,68,5,58,Yes,No,High School,59
+81,Male,19,7,91,8,82,No,Yes,Postgraduate,89
+82,Female,22,4,75,6,65,Yes,Yes,Graduate,69
+83,Male,18,6,86,7,76,Yes,Yes,Graduate,81
+84,Female,20,2,60,5,51,No,No,High School,52
+85,Male,21,8,94,8,84,No,Yes,Postgraduate,91
+86,Female,19,5,81,7,71,Yes,Yes,Graduate,75
+87,Male,22,4,74,6,64,No,No,High School,66
+88,Female,18,7,92,8,83,No,Yes,Postgraduate,90
+89,Male,20,3,66,5,56,Yes,No,High School,57
+90,Female,21,6,85,7,75,Yes,Yes,Graduate,80
+91,Male,19,5,83,7,73,No,Yes,Graduate,77
+92,Female,22,8,93,8,84,No,Yes,Postgraduate,91
+93,Male,18,4,76,6,66,Yes,Yes,High School,69
+94,Female,20,6,87,7,77,Yes,Yes,Graduate,82
+95,Male,21,2,62,5,53,No,No,High School,54
+96,Female,19,7,90,8,81,No,Yes,Postgraduate,88
+97,Male,22,5,81,7,71,Yes,Yes,Graduate,75
+98,Female,18,3,67,5,57,No,No,High School,58
+99,Male,20,9,97,8,89,No,Yes,Postgraduate,96
+100,Female,21,4,77,6,67,Yes,Yes,Graduate,71
