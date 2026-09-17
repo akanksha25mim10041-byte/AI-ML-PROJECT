@@ -1,227 +1,321 @@
-# AI-ML-PROJECT
-📊 Academic Score Forecaster
-A machine learning project that predicts student exam scores based on study habits, attendance, sleep, and other lifestyle factors.
 
-📌 Overview
-This project builds a supervised machine learning regression model to estimate a student's final exam score using academic and behavioral features. It helps educators identify at-risk students early, personalize interventions, and understand which factors most influence academic success.
+# 📊 AI-ML-PROJECT
+## Academic Score Forecaster
 
-The system is implemented in Python using popular data science libraries and compares four regression algorithms to find the best performer. The workflow includes data loading, exploratory data analysis (EDA), preprocessing (encoding, scaling), train‑test splitting, model training, evaluation, and visualization of results.
+A machine learning project that predicts student exam scores based on study habits, attendance, sleep, and other lifestyle factors. The project also includes an interactive **Streamlit web application** and **SHAP-based explainable AI** to help users understand model predictions.
 
-📌 Problem Statement
-Student academic performance is influenced by many factors beyond raw intelligence — study hours, attendance, sleep, parental education, and access to resources all play a role. Traditional methods of identifying struggling students often rely on subjective judgment or delayed test scores, making timely intervention difficult.
+---
 
-This project solves that by creating a predictive model that estimates a student's exam score from these features, helping educators identify at-risk students early and provide data‑driven academic support.
+## 📌 Overview
 
-📁 Project Structure
+The Academic Score Forecaster is a supervised machine learning regression project that estimates a student's final exam score using academic and behavioral features.
+
+The project compares four regression algorithms and provides an interactive web interface where users can enter student information and receive a predicted exam score.
+
+The Streamlit application allows users to:
+- Enter student academic and lifestyle details.
+- Generate predicted exam scores.
+- View model-based feature importance.
+- Understand how different features influence individual predictions using SHAP.
+- Interact with the machine learning model through a user-friendly interface.
+
+---
+
+## 📌 Problem Statement
+
+Student academic performance is influenced by several factors, including study hours, attendance, sleep, previous scores, parental education, and access to resources.
+
+Traditional methods of identifying struggling students may depend on delayed examination results or subjective judgment.
+
+This project develops a machine learning-based prediction system that estimates exam scores from student-related features. The system also uses explainable AI techniques to provide insights into the factors influencing predictions.
+
+---
+
+## 🎯 Project Objectives
+
+1. Predict student exam scores using machine learning.
+2. Compare multiple regression algorithms.
+3. Identify the best-performing regression model.
+4. Develop an interactive Streamlit web application.
+5. Explain individual predictions using SHAP.
+6. Provide insights into the factors associated with academic performance.
+
+---
+
+## 📁 Project Structure
+
+```text
 academic-score-forecaster/
+│
+├── academic_score_forecaster.py  # Main machine learning pipeline
+├── app.py                        # Streamlit web application
+├── student_performance.csv       # Dataset
+├── eda_plots.png                 # EDA visualizations
+├── project_report.docx           # Project report
+├── requirements.txt              # Project dependencies
+└── README.md                     # Project documentation
+```
 
-├── academic_score_forecaster.py # Main ML pipeline
+---
 
-├── student_performance.csv # Dataset (100 student records)
+## 📊 Dataset Summary
 
-├── eda_plots.png # Generated EDA visualizations
+The dataset contains 100 student records and includes the following features:
 
-├──project_report.docx # project report document
+| Feature | Description |
+|---|---|
+| student_id | Unique student identifier |
+| gender | Gender of the student |
+| age | Age of the student |
+| study_hours_per_day | Average daily study hours |
+| attendance_percentage | Class attendance percentage |
+| sleep_hours | Average sleep per night |
+| previous_score | Previous examination score |
+| extracurricular | Participation in extracurricular activities |
+| internet_access | Availability of internet access |
+| parent_education_level | Parent's education level |
+| exam_score | Final examination score (target variable) |
 
-├── requirements.txt # Dependencies and requirements
+### Key Dataset Insights
 
-└── README.md # This file
+- The dataset contains 100 student records.
+- No missing values are reported in the original dataset.
+- Exam scores range approximately from 50 to 95.
+- Study hours vary from approximately 2 to 8 hours per day.
+- Most students have attendance above 70%.
 
-📊 Dataset Summary
-The dataset (student_performance.csv) contains 100 student records with the following features:
+---
 
-Column	Description
-student_id	Unique student identifier
-gender	Male / Female
-age	Age of the student (18–22)
-study_hours_per_day	Average daily study hours
-attendance_percentage	Class attendance (%)
-sleep_hours	Average sleep per night
-previous_score	Score in previous exam
-extracurricular	Participates in activities (Yes/No)
-internet_access	Has internet access (Yes/No)
-parent_education_level	High School / Graduate / Postgraduate
-exam_score	Target variable – Final exam score
-Key insights from the dataset:
+## 🧠 Machine Learning Concepts Used
 
-No missing values across any column.
-Exam scores range approximately from 50 to 95.
-Study hours vary from 2 to 8 hours per day.
-Most students have attendance above 70%.
-🧠 ML Concepts Used
-Exploratory Data Analysis (EDA)
-Label Encoding & Feature Scaling
-Train/Test Split
-Regression Models:
-Linear Regression
-Decision Tree Regressor
-Random Forest Regressor ⭐ (best performer)
-Gradient Boosting Regressor
-Model Evaluation: MAE, RMSE, R² Score
-Feature Importance Analysis
-🛠 Tech Stack
-Tool	Purpose
-Python 3	Core language
-Pandas	Data loading & manipulation
-NumPy	Numerical operations
-Matplotlib / Seaborn	Visualization
-Scikit-learn	ML models & evaluation
-🔄 Workflow (Step‑by‑Step Explanation)
-The project follows a standard machine learning pipeline:
+- Exploratory Data Analysis (EDA)
+- Data preprocessing
+- Label Encoding
+- Feature Scaling
+- Train-Test Split
+- Regression Algorithms
+- Model Evaluation
+- Feature Importance Analysis
+- Explainable AI using SHAP
+- Interactive Machine Learning Deployment using Streamlit
 
-Data Loading – Load student_performance.csv into a pandas DataFrame.
-Data Inspection – Check shape, data types, missing values, and summary statistics.
-Exploratory Data Analysis (EDA) – Generate histograms, scatter plots, correlation heatmap, and bar charts to understand feature relationships.
-Preprocessing – Drop student_id, apply label encoding to categorical columns, scale numerical features using StandardScaler.
-Train/Test Split – Split data into 80% training and 20% testing sets (fixed random seed for reproducibility).
-Model Training – Train four regression models on the training set.
-Model Evaluation – Compute MAE, RMSE, and R² on the test set for each model.
-Best Model Selection – Identify the model with the highest R² score.
-Visualization – Generate model comparison charts, actual vs. predicted scatter plot, and feature importance bar chart.
-Prediction – Accept new student data and output a predicted exam score using the best model.
-🤖 Models Implemented
-Model	Description	Performance (R²)
-Linear Regression	Baseline linear model	0.9823
-Decision Tree Regressor	Tree‑based model splitting on features	0.9741
-Random Forest Regressor	Ensemble of decision trees	0.9901 (Best)
-Gradient Boosting Regressor	Sequential tree‑based boosting	0.9887
-Why Random Forest performed best:
+---
 
-Handles non‑linear relationships automatically.
-Reduces overfitting compared to a single decision tree.
-Provides feature importance scores for interpretability.
-📈 Results
-Best Model: Random Forest Regressor
-R² Score: 0.9901
-MAE: Low (exact value shown on run)
-RMSE: Low
-Key Insight:
-Study hours and previous exam score are the strongest predictors of final exam performance. Attendance and parental education also show significant correlation.
+## 🤖 Machine Learning Models
 
-📊 Sample Prediction
-Input Features	Predicted Exam Score
-Male, 19 years, 6 study hours/day, 88% attendance, 7h sleep, previous score 75, extracurricular Yes, internet Yes, parent education Graduate	81.4 / 100
-More sample scenarios (illustrative):
+The project compares the following regression algorithms:
 
-Low study hours (2h/day), 65% attendance → predicted score ~54
-High study hours (8h/day), 95% attendance → predicted score ~92
-⚙️ Setup & Installation
-1. Clone the Repository
-git clone https://github.com/PariRaghuwanshi1906/academic-score-forecaster/
-cd academic-score-forecaster
+| Model | Description |
+|---|---|
+| Linear Regression | Baseline linear regression model |
+| Decision Tree Regressor | Tree-based regression model |
+| Random Forest Regressor | Ensemble of multiple decision trees |
+| Gradient Boosting Regressor | Sequential boosting-based model |
 
-2. Install Dependencies (Required Packages)
-The project requires the following Python libraries:
+### Reported Model Performance
 
-pandas – data loading and manipulation
+| Model | R² Score |
+|---|---:|
+| Linear Regression | 0.9823 |
+| Decision Tree Regressor | 0.9741 |
+| Random Forest Regressor | 0.9901 |
+| Gradient Boosting Regressor | 0.9887 |
 
-numpy – numerical operations
+The reported results identify Random Forest Regressor as the best-performing model in the original experiment.
 
-matplotlib – plotting
+> Note: These performance values depend on the dataset, preprocessing, train-test split, and model configuration.
 
-seaborn – enhanced visualizations
+---
 
-scikit-learn – machine learning models and metrics
+## 🌐 Streamlit Web Application
 
-Install all at once:
-pip install pandas numpy matplotlib seaborn scikit-learn
+The project includes an interactive web application developed using **Streamlit**.
 
-Python 3.8+ recommended. Using a virtual environment is advised.
+The application provides a graphical interface for interacting with the machine learning model without requiring users to enter commands in the terminal.
 
-3. Run the Project
+### Streamlit Features
+
+- User-friendly input interface.
+- Input fields for student academic and lifestyle information.
+- Real-time exam score prediction after submitting details.
+- Predicted score displayed out of 100.
+- Feature importance visualization.
+- SHAP-based explanation of individual predictions.
+- Interactive and accessible machine learning demonstration.
+
+### Application Workflow
+
+```text
+User enters student details
+          ↓
+Input preprocessing
+          ↓
+Machine learning model
+          ↓
+Predicted exam score
+          ↓
+Feature importance and SHAP explanation
+```
+
+---
+
+## 🔍 Explainable AI Using SHAP
+
+The application integrates **SHAP (SHapley Additive exPlanations)** to improve the interpretability of machine learning predictions.
+
+SHAP helps explain how individual input features contribute to a model's prediction.
+
+For example, the SHAP explanation can show whether features such as:
+
+- Study hours
+- Previous examination score
+- Attendance percentage
+- Sleep hours
+- Other student attributes
+
+contribute positively or negatively to a particular prediction.
+
+### Benefits of SHAP
+
+- Improves model transparency.
+- Helps users understand individual predictions.
+- Identifies influential features.
+- Supports explainable machine learning.
+- Makes model results easier to discuss during project demonstrations.
+
+> SHAP explanations show model associations and contributions. They do not prove that a feature directly causes a student's academic performance.
+
+---
+
+## 🛠 Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Pandas | Data loading and manipulation |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Scikit-learn | Machine learning models and preprocessing |
+| Streamlit | Interactive web application |
+| SHAP | Explainable AI and prediction interpretation |
+| Joblib | Model and preprocessing artifact management |
+
+---
+
+## 🔄 Project Workflow
+
+1. **Data Loading** – Load the student performance dataset.
+2. **Data Inspection** – Check data shape, data types, and missing values.
+3. **Exploratory Data Analysis** – Generate visualizations to understand the dataset.
+4. **Preprocessing** – Encode categorical features and scale numerical features.
+5. **Train-Test Split** – Divide the dataset into training and testing sets.
+6. **Model Training** – Train four regression algorithms.
+7. **Model Evaluation** – Calculate MAE, RMSE, and R² scores.
+8. **Best Model Selection** – Compare model performance.
+9. **Streamlit Deployment** – Create an interactive prediction interface.
+10. **Prediction** – Accept new student information and estimate the exam score.
+11. **SHAP Explanation** – Explain how input features influence individual predictions.
+
+---
+
+## ⚙️ Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/akanksha25mim10041-byte/AI-ML-PROJECT.git
+cd AI-ML-PROJECT
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn streamlit shap joblib
+```
+
+Alternatively, install the dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the Machine Learning Pipeline
+
+```bash
 python academic_score_forecaster.py
+```
+
+### 4. Run the Streamlit Application
+
+```bash
+streamlit run app.py
+```
+
+The application will open in your browser at the local Streamlit address displayed in the terminal.
 
 ---
 
+## 📈 Generated Visualizations
 
-## 📈 Sample Output (Console)
+The project can generate the following visualizations:
 
-======================================================
-       ACADEMIC SCORE FORECASTER
-======================================================
-
-📂 Dataset Shape : 100 rows × 11 columns
-
-  🤖 Linear Regression     → R²: 0.9823
-  🤖 Decision Tree         → R²: 0.9741
-  🤖 Random Forest         → R²: 0.9901  ← Best
-  🤖 Gradient Boosting     → R²: 0.9887
-
-🏆 Best Model: Random Forest  (R² = 0.9901)
-
-  🎓 Predicted Exam Score: 81.4 / 100
-
-Four plots are auto-saved:
-
-eda_plots.png — distributions, scatter plots, heatmap
-
-model_comparison.png — R², MAE, RMSE side-by-side
-
-actual_vs_predicted.png — best model accuracy
-
-feature_importance.png — top contributing features
+- `eda_plots.png` — Exploratory data analysis plots.
+- `model_comparison.png` — Comparison of model performance.
+- `actual_vs_predicted.png` — Actual versus predicted scores.
+- `feature_importance.png` — Feature importance visualization.
+- SHAP plots — Explanations for individual predictions in the Streamlit application.
 
 ---
 
+## 🎓 Sample Prediction
 
-## 🔍 Key Findings
-Study hours and previous score are the strongest predictors of exam performance.
+### Example Input
 
-Attendance percentage is highly correlated with final score.
+| Feature | Value |
+|---|---|
+| Gender | Male |
+| Age | 19 |
+| Study Hours | 6 hours/day |
+| Attendance | 88% |
+| Sleep | 7 hours |
+| Previous Score | 75 |
+| Extracurricular | Yes |
+| Internet Access | Yes |
+| Parent Education | Graduate |
 
-Students with postgraduate parents score consistently higher on average.
+The original project documentation reports an illustrative predicted score of **81.4/100**.
 
-Random Forest outperforms other models with R² > 0.99 on this dataset.
----
-
-
-## 🚀 How to Predict for a New Student
-Edit the predict_new_student() function in the script:
-
-new_student = pd.DataFrame([{
-    "gender":                 1,    # 1=Male, 0=Female
-    "age":                    19,
-    "study_hours_per_day":    6,
-    "attendance_percentage":  88,
-    "sleep_hours":            7,
-    "previous_score":         75,
-    "extracurricular":        1,    # 1=Yes, 0=No
-    "internet_access":        1,
-    "parent_education_level": 1,
-}])
-
-Run the script again or call the predict_new_student() function.
+> The exact prediction displayed by the Streamlit application may vary depending on the trained model and preprocessing configuration.
 
 ---
 
-##🔮 Future Enhancements
-Hyperparameter tuning using GridSearchCV for higher accuracy.
+## 🔮 Future Enhancements
 
-Cross‑validation (k‑fold) to reduce overfitting.
-
-Larger dataset with more diverse student populations.
-
-Web deployment using Streamlit or Flask for easy educator access.
-
-Explainable AI (SHAP/LIME) to interpret individual predictions.
-
-Classification alternative (pass/fail or grade brackets).
+- Hyperparameter tuning using GridSearchCV.
+- K-fold cross-validation.
+- Training on a larger dataset.
+- Model artifact loading instead of retraining.
+- Cloud deployment of the Streamlit application.
+- Improved SHAP visualizations.
+- Pass/fail and grade classification.
+- Student performance trend analysis.
+- Automated academic support recommendations.
 
 ---
-
 
 ## ✨ Key Highlights
-Clean and structured ML pipeline.
 
-Comparison of four regression models.
+- Complete machine learning regression pipeline.
+- Comparison of four regression models.
+- Interactive Streamlit prediction application.
+- SHAP-based explainable AI integration.
+- Feature importance analysis.
+- Automated data visualization.
+- Easy-to-use interface for demonstrating machine learning predictions.
 
-Strong predictive performance (R² > 0.99).
+---
 
-Feature importance analysis for interpretability.
+## 👤 Author
 
-Automatic generation of publication‑ready plots.
-
-Easy to extend and modify.
-
-👤 Author
-Akanksha Chauhan
+**Akanksha Chauhan**
